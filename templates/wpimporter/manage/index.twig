@@ -1,0 +1,21 @@
+{% extends '/manage/index.twig' %}
+{% import '/macros/forms.twig' as forms %}
+
+{% set pageTitle = 'WP Importer' %}
+
+{% set bodyClass = ['form'] %}
+
+{% block content %}
+    {% if db %}
+        <h1 class="t-right">WP Importer</h1>
+        <div class="display-block t-left m-20">
+            <form method="post" class="mw-800 m-0-auto">
+                {{ forms.checkbox('type-posts', 'Posts', false) }}
+                {{ forms.checkbox('type-pages', 'Pages', false) }}
+                <button>Import</button>
+            </form>
+        </div>
+    {% else %}
+        <p>You must configure the database to import from in the module.json file.</p>
+    {% endif %}
+{% endblock %}

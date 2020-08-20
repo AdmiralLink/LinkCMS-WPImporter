@@ -1,0 +1,8 @@
+{
+    "name": "WP Importer",
+    "author": "Kaitlyn Concilio",
+    "authorUrl": "https://technicalpenguins.com",
+    "moduleUrl": "https://github.com/kaitwalla/LinkCMS-WPImporter",
+    "register": ["\\LinkCMS\\Modules\\WPImporter\\Actor","Register"],
+    "version": "0.1"
+}
